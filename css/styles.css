@@ -47,9 +47,7 @@ img {
 }
 .link {
 	text-decoration: none;
-	transition-property: color, background;
-	transition-duration: 250ms, 250ms;
-	transition-timing-function: var(--basic-cubic);
+	transition: color 250ms var(--basic-cubic);
 }
 .btn {
 	font-family: inherit;
@@ -58,9 +56,7 @@ img {
 	line-height: 1.5;
 	letter-spacing: 0.04em;
 	cursor: pointer;
-	transition-property: color, background;
-	transition-duration: 250ms, 250ms;
-	transition-timing-function: var(--basic-cubic);
+	transition: color 250ms var(--basic-cubic), background 250ms var(--basic-cubic);
 }
 
 .title {
@@ -126,6 +122,9 @@ img {
 	position: relative;
 	padding: 24px 0;
 	color: #2e2f42;
+}
+.header-link.active {
+	color: #404bbf;
 }
 .header-link.active::after {
 	content: "";
@@ -333,6 +332,7 @@ img {
 	border: 1px solid #8e8f99;
 	border-radius: 4px;
 	color: #404bbf;
+	transition: color 250ms var(--basic-cubic);
 }
 .customers-logo-icon {
 	fill: #8e8f99;
@@ -363,7 +363,9 @@ img {
 	border-radius: 4px;
 	background: #f4f4fd;
 	padding: 12px 24px;
+	transition: color 250ms var(--basic-cubic), background 250ms var(--basic-cubic);
 }
+
 .filter-btn:is(:hover, :focus) {
 	background: #404bbf;
 	color: #ffffff;
