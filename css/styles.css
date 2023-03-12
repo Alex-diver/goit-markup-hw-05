@@ -47,7 +47,7 @@ img {
 }
 .link {
 	text-decoration: none;
-	transition: color 250ms var(--basic-cubic);
+	transition: color 250ms var(--basic-cubic), background 250ms var(--basic-cubic);
 }
 .btn {
 	font-family: inherit;
@@ -332,17 +332,21 @@ img {
 	border: 1px solid #8e8f99;
 	border-radius: 4px;
 	color: #404bbf;
-	transition: color 250ms var(--basic-cubic);
+	transition-property: color;
+	transition-duration: 250ms;
+	transition-timing-function: var(--basic-cubic);
 }
 .customers-logo-icon {
 	fill: #8e8f99;
 }
 .customers-logo-link:is(:hover, :focus) {
 	border: 1px solid #404bbf;
+	transform: color 250ms var(--basic-cubic);
 }
 
 .customers-logo-link:is(:hover, :focus) .customers-logo-icon {
 	fill: currentColor;
+	transition: fill 250ms var(--basic-cubic);
 }
 
 /* ---------------------Filter--------------------- */
